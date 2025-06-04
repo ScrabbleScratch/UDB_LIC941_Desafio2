@@ -25,17 +25,22 @@ export default function ProductDetailsDialog({ product, open, onClose }) {
             sx={{ objectFit: "contain" }}
           />
         </Box>
-        <Stack my={2} direction="row" justifyContent="space-between" alignItems="flex-start">
-          <Typography variant="h5" fontWeight="bold">
-            {product.title}
+        <Stack mt={2} gap={4}>
+          <Stack direction="row" justifyContent="space-between" alignItems="flex-start">
+            <Typography variant="h5" fontWeight="bold">
+              {product.title}
+            </Typography>
+            <Typography variant="h4" fontWeight="bold">
+              ${product.price.toFixed(2)}
+            </Typography>
+          </Stack>
+          <Typography height="4em" maxHeight="4em" variant="body2" color="textSecondary" overflow="hidden" textOverflow="ellipsis">
+            {product.description}
           </Typography>
-          <Typography variant="h4" fontWeight="bold">
-            ${product.price.toFixed(2)}
+          <Typography width="fit-content" px={2} py={0.5} variant="body1" fontWeight="bold" bgcolor="lightgray" borderRadius="100px">
+            {product.category}
           </Typography>
         </Stack>
-        <Typography height="4em" maxHeight="4em" variant="body2" color="textSecondary" overflow="hidden" textOverflow="ellipsis">
-          {product.description}
-        </Typography>
         <Stack mt={4} direction="row" justifyContent="center" alignItems="center" gap={4}>
           <Button
             variant="outlined"
