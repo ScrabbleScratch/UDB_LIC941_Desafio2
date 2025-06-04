@@ -4,22 +4,52 @@ import Products from "../assets/products.json"; // Importa el JSON de productos
 
 import ProductCard from "./ProductCard";
 import { useState } from "react";
+import Slider from "react-slick";
 
 export default function Catalog() {
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState("");
 
+  var sliderSettings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 4000,
+  };
+
   return (
     <>
-      <Box
-        component="img"
-        width="100%"
-        height="50vh"
-        src="https://immago.com/wp-content/uploads/2023/08/apparel-industry-today.jpg"
-        sx={{
-          objectFit: "cover",
-        }}
-      />
+      <Slider {...sliderSettings}>
+        <div>
+          <Box
+            component="img"
+            width="100%"
+            height="60vh"
+            src="https://halcoeurope.com/cdn/shop/articles/articleapparel_1200x.jpg?v=1709558418"
+            sx={{ objectFit: "cover" }}
+          />
+        </div>
+        <div>
+          <Box
+            component="img"
+            width="100%"
+            height="60vh"
+            src="https://api.c2ccertified.org/assets/sectorpages/apparel,-textile,-footwear-sector-page-cradle-to-cradle-products-innovation-institute-(1).jpg"
+            sx={{ objectFit: "cover" }}
+          />
+        </div>
+        <div>
+          <Box
+            component="img"
+            width="100%"
+            height="60vh"
+            src="https://s.abcnews.com/images/Business/GTY_american_apparel_store_inside_jef_151005.jpg"
+            sx={{ objectFit: "cover" }}
+          />
+        </div>
+      </Slider>
       <Stack
         direction="row"
         justifyContent="space-between"
