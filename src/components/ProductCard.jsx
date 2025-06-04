@@ -1,6 +1,10 @@
 import { Box, Button, Paper, Stack, Typography } from "@mui/material";
+import { useState } from "react";
+import ProductDetailsDialog from "./ProductDetailsDialog";
 
 export default function ProductCard({ product }) {
+  const [open, setOpen] = useState(false);
+
   return (
     <Paper className="product-card" sx={{ p: 2, bgcolor: "#fafafa" }}>
       <Box width="100%" height="auto" sx={{ aspectRatio: "2 / 1" }}>
@@ -28,10 +32,11 @@ export default function ProductCard({ product }) {
         <Typography px={2} py={0.5} variant="body1" fontWeight="bold" bgcolor="lightgray" borderRadius="100px">
           {product.category}
         </Typography>
-        <Button variant="contained" color="warning">
+        <Button variant="contained" color="warning" onClick={() => setOpen(true)}>
           Detalles
         </Button>
       </Stack>
+      <ProductDetailsDialog product={product} open={open} onClose={() => setOpen(false)} />
     </Paper>
   );
 }
