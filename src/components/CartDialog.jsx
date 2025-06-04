@@ -1,10 +1,24 @@
 import { Box, Button, Dialog, DialogActions, DialogContent, DialogTitle, Divider, IconButton, Paper, Stack, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from "@mui/material";
 import { useCart } from "../hooks/useCart";
 import { CreditCardOutlined, DeleteOutlineOutlined } from "@mui/icons-material";
+import PaymentDialog from "./PaymentDialog";
+import { useState } from "react";
 
 export default function CartDialog({ open, onClose }) {
+  const [openPayment, setOpenPayment] = useState(false);
+
   const { cart, removeItem, clearCart } = useCart();
   const totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2);
+
+  const handleOpenPayment = () => {
+    clearCart();
+    setOpenPayment(true);
+  }
+
+  const handlePaymentSuccess = () => {
+    onClose();
+    setOpenPayment(false);
+  }
 
   return (
     <Dialog open={open} onClose={onClose} fullWidth maxWidth="md">
@@ -61,7 +75,7 @@ export default function CartDialog({ open, onClose }) {
             <Button
               variant="contained"
               color="warning"
-              onClick={onClose}
+              onClick={handleOpenPayment}
               startIcon={<CreditCardOutlined />}
             >
               Pagar
@@ -69,6 +83,7 @@ export default function CartDialog({ open, onClose }) {
           </>
         )}
       </DialogActions>
+      <PaymentDialog open={openPayment} onClose={handlePaymentSuccess} />
     </Dialog>
   );
 }

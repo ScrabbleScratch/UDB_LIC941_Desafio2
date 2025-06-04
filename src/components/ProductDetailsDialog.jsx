@@ -13,7 +13,7 @@ export default function ProductDetailsDialog({ product, open, onClose }) {
   return (
     <Dialog open={open} onClose={onClose}>
       <DialogContent>
-        <Box width="100%" height="auto" borderBottom="1px solid #e0e0e0" sx={{ aspectRatio: "2 / 1" }}>
+        <Box width="100%" height="auto" borderBottom="1px solid #e0e0e0" sx={{ aspectRatio: "1 / 1" }}>
           <Box
             component="img"
             src={product.image}
