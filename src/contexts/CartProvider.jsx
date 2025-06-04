@@ -8,19 +8,21 @@ export default function CartProvider({ children }) {
   const [cart, setCart] = useState([]);
 
   const addItem = (itemId) => {
-    const item = cart.find((item) => item.id === itemId);
-    let newItem = item ? { ...item } : null;
-    if (newItem) {
-      newItem.quantity++;
+    const cartItems = [...cart];
+    let item = cartItems.find((item) => item.id === itemId);
+    // let newItem = item ? { ...item } : null;
+    if (item) {
+      item.quantity++;
     } else {
       const product = Products.find((product) => product.id === itemId);
       if (!product) {
         console.error(`Product with id ${itemId} not found`);
         return;
       }
-      newItem = { id: product.id, title: product.title, price: product.price, quantity: 1 };
+      item = { id: product.id, title: product.title, price: product.price, quantity: 1 };
+      cartItems.push(item);
     }
-    setCart([...cart, newItem]);
+    setCart(cartItems);
   };
 
   const removeItem = (itemId) => {
