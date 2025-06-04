@@ -19,8 +19,8 @@ export default function ProductDetailsDialog({ product, open, onClose }) {
             src={product.image}
             alt={product.title}
             width="100%"
-            height="auto"
-            sx={{ objectFit: "cover" }}
+            height="100%"
+            sx={{ objectFit: "contain" }}
           />
         </Box>
         <Stack my={2} direction="row" justifyContent="space-between" alignItems="flex-start">
