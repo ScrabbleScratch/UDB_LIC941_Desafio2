@@ -6,9 +6,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <Box width="100%" px={20} py={4}>
-        <Catalog />
-      </Box>
+      <Catalog />
     </>
   );
 }

@@ -21,8 +21,8 @@ export default function ProductCard({ product }) {
           ${product.price.toFixed(2)}
         </Typography>
       </Stack>
-      <Typography variant="body2" color="textSecondary">
-        {product.description}
+      <Typography height="4em" maxHeight="4em" variant="body2" color="textSecondary" overflow="hidden" textOverflow="ellipsis">
+        {product.subtitle}
       </Typography>
       <Stack mt={2} direction="row" justifyContent="space-between" alignItems="center">
         <Typography px={2} py={0.5} variant="body1" fontWeight="bold" bgcolor="lightgray" borderRadius="100px">
