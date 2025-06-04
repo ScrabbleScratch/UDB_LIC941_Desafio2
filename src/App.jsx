@@ -1,10 +1,14 @@
-import Navbar from "./components/layout/Navbar";
+import { Box } from "@mui/material";
+import Navbar from "./components/Navbar";
+import Catalog from "./components/Catalog";
 
 function App() {
   return (
     <>
       <Navbar />
-      <h1>Mavito Shop</h1>
+      <Box width="100%" px={20} py={4}>
+        <Catalog />
+      </Box>
     </>
   );
 }

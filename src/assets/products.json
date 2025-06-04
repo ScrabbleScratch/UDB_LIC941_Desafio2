@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "title": "Zapatos de cuero",
+    "price": 10.0,
+    "image": "https://gt.tiendasadoc.com/cdn/shop/files/300592501_2048x.jpg?v=1747430554",
+    "description": "Zapatos de cuero de alta calidad, perfectos para cualquier ocasión.",
+    "category": "Calzado"
+  },
+  {
+    "id": 2,
+    "title": "Camisa de algodón",
+    "price": 15.0,
+    "image": "https://gt.tiendasadoc.com/cdn/shop/files/300592502_2048x.jpg?v=1747430554",
+    "description": "Camisa de algodón suave y cómoda, ideal para el uso diario.",
+    "category": "Ropa"
+  },
+  {
+    "id": 3,
+    "title": "Pantalones vaqueros",
+    "price": 20.0,
+    "image": "https://gt.tiendasadoc.com/cdn/shop/files/300592503_2048x.jpg?v=1747430554",
+    "description": "Pantalones vaqueros resistentes y con estilo, perfectos para cualquier ocasión.",
+    "category": "Ropa"
+  },
+  {
+    "id": 4,
+    "title": "Bolso de mano",
+    "price": 25.0,
+    "image": "https://gt.tiendasadoc.com/cdn/shop/files/300592504_2048x.jpg?v=1747430554",
+    "description": "Bolso de mano elegante y espacioso, ideal para llevar tus pertenencias.",
+    "category": "Accesorios"
+  },
+  {
+    "id": 5,
+    "title": "Reloj de pulsera",
+    "price": 30.0,
+    "image": "https://gt.tiendasadoc.com/cdn/shop/files/300592505_2048x.jpg?v=1747430554",
+    "description": "Reloj de pulsera moderno y funcional, perfecto para cualquier ocasión.",
+    "category": "Accesorios"
+  },
+  {
+    "id": 6,
+    "title": "Gafas de sol",
+    "price": 12.0,
+    "image": "https://gt.tiendasadoc.com/cdn/shop/files/300592506_2048x.jpg?v=1747430554",
+    "description": "Gafas de sol con protección UV, ideales para el verano.",
+    "category": "Accesorios"
+  },
+  {
+    "id": 7,
+    "title": "Bufanda de lana",
+    "price": 18.0,
+    "image": "https://gt.tiendasadoc.com/cdn/shop/files/300592507_2048x.jpg?v=1747430554",
+    "description": "Bufanda de lana suave y cálida, perfecta para el invierno.",
+    "category": "Accesorios"
+  },
+  {
+    "id": 8,
+    "title": "Sombrero de paja",
+    "price": 14.0,
+    "image": "https://gt.tiendasadoc.com/cdn/shop/files/300592508_2048x.jpg?v=1747430554",
+    "description": "Sombrero de paja ligero y cómodo, ideal para días soleados.",
+    "category": "Accesorios"
+  },
+  {
+    "id": 9,
+    "title": "Chaqueta de cuero",
+    "price": 50.0,
+    "image": "https://gt.tiendasadoc.com/cdn/shop/files/300592509_2048x.jpg?v=1747430554",
+    "description": "Chaqueta de cuero auténtico, perfecta para un look elegante y moderno.",
+    "category": "Ropa"
+  },
+  {
+    "id": 10,
+    "title": "Botines de gamuza",
+    "price": 40.0,
+    "image": "https://gt.tiendasadoc.com/cdn/shop/files/300592510_2048x.jpg?v=1747430554",
+    "description": "Botines de gamuza cómodos y con estilo, ideales para el otoño.",
+    "category": "Calzado"
+  }
+]
