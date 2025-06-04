@@ -1,5 +1,5 @@
 import { ShoppingCartCheckoutOutlined } from "@mui/icons-material";
-import { Container, Stack, Typography } from "@mui/material";
+import { Button, Container, Stack, Typography } from "@mui/material";
 
 export default function Navbar() {
   return (
@@ -22,12 +22,11 @@ export default function Navbar() {
           Mavito Shop
         </Typography>
       </Stack>
-      <Stack direction="row" alignItems="center" gap={2}>
-        <ShoppingCartCheckoutOutlined />
+      <Button startIcon={<ShoppingCartCheckoutOutlined />} color="inherit">
         <Typography variant="body1" fontWeight="bold">
           $0.00
         </Typography>
-      </Stack>
+      </Button>
     </Stack>
   )
 }

@@ -2,7 +2,7 @@ import { Box, Button, Paper, Stack, Typography } from "@mui/material";
 
 export default function ProductCard({ product }) {
   return (
-    <Paper sx={{ p: 2, bgcolor: "#fafafa" }}>
+    <Paper className="product-card" sx={{ p: 2, bgcolor: "#fafafa" }}>
       <Box width="100%" height="auto" sx={{ aspectRatio: "2 / 1" }}>
         <Box
           component="img"
