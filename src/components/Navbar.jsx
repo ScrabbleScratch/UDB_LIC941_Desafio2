@@ -1,7 +1,11 @@
 import { ShoppingCartCheckoutOutlined } from "@mui/icons-material";
 import { Button, Container, Stack, Typography } from "@mui/material";
+import { useCart } from "../hooks/useCart";
 
 export default function Navbar() {
+  const { cart } = useCart();
+  const totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2);
+
   return (
     <Stack
       w="100%"
@@ -24,7 +28,7 @@ export default function Navbar() {
       </Stack>
       <Button startIcon={<ShoppingCartCheckoutOutlined />} color="inherit">
         <Typography variant="body1" fontWeight="bold">
-          $0.00
+          ${totalPrice} ({cart.length})
         </Typography>
       </Button>
     </Stack>
