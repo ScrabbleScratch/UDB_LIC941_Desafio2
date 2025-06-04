@@ -8,6 +8,9 @@ export default function Navbar() {
   const [openCart, setOpenCart] = useState(false);
 
   const { cart } = useCart();
+
+  // Calcular el precio total del carrito
+  // Redondear a dos decimales
   const totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2);
 
   return (

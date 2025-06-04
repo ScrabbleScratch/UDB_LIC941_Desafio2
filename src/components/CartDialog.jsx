@@ -10,11 +10,13 @@ export default function CartDialog({ open, onClose }) {
   const { cart, removeItem, clearCart } = useCart();
   const totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2);
 
+  // Abre el dialog de pago y limpia el carrito
   const handleOpenPayment = () => {
     clearCart();
     setOpenPayment(true);
   }
 
+  // Maneja el éxito del pago, cierra el dialog de pago y el carrito
   const handlePaymentSuccess = () => {
     onClose();
     setOpenPayment(false);

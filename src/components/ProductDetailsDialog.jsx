@@ -2,9 +2,11 @@ import { Box, Button, Dialog, DialogContent, Stack, Typography } from "@mui/mate
 import { useCart } from "../hooks/useCart";
 import { AddShoppingCartOutlined } from "@mui/icons-material";
 
+// Muestra los detalles de un producto y permite agregarlo al carrito
 export default function ProductDetailsDialog({ product, open, onClose }) {
   const { addItem } = useCart();
 
+  // Agregar el producto al carrito y cerrar el dialog
   const handleAddToCart = () => {
     addItem(product.id);
     onClose();

@@ -1,6 +1,7 @@
 import { CreditScore } from "@mui/icons-material";
 import { Button, Dialog, DialogActions, DialogContent, Typography } from "@mui/material";
 
+// Muestra un mensaje de éxito al completar el pago
 export default function PaymentDialog({ open, onClose }) {
   return (
     <Dialog open={open} onClose={onClose} fullWidth maxWidth="lg">

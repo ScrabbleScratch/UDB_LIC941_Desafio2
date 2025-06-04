@@ -1,6 +1,6 @@
 import { Box, FormControl, Grid, InputLabel, MenuItem, OutlinedInput, Select, Stack, Typography } from "@mui/material";
 
-import Products from "../assets/products.json"; // Assuming we have a products.json file in the assets folder
+import Products from "../assets/products.json"; // Importa el JSON de productos
 
 import ProductCard from "./ProductCard";
 import { useState } from "react";
@@ -53,6 +53,7 @@ export default function Catalog() {
               <MenuItem value="">
                 <em>Todos</em>
               </MenuItem>
+              {/* Renderizar las categorías unicas */}
               {Products
                 .map(product => product.category)
                 .filter((value, index, self) => self.indexOf(value) === index)
@@ -67,6 +68,7 @@ export default function Catalog() {
         </Stack>
       </Stack>
       <Grid container spacing={4} px={20} py={4}>
+        {/* Renderizar los productos filtrados por categoría y busqueda */}
         {Products
           .filter(product => product.category === category || category === "")
           .filter(product => product.title.toLowerCase().includes(search.toLowerCase()))

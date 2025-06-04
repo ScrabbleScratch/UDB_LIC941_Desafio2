@@ -1,16 +1,17 @@
 import { createContext, useState } from "react";
 
-import Products from "../assets/products.json";
+import Products from "../assets/products.json"; // Importa el JSON de productos
 
 export const CartContext = createContext();
 
 export default function CartProvider({ children }) {
   const [cart, setCart] = useState([]);
 
+  // Funcion para agregar un item al carrito
+  // Si el item ya existe, incrementa su cantidad
   const addItem = (itemId) => {
     const cartItems = [...cart];
     let item = cartItems.find((item) => item.id === itemId);
-    // let newItem = item ? { ...item } : null;
     if (item) {
       item.quantity++;
     } else {
@@ -25,10 +26,12 @@ export default function CartProvider({ children }) {
     setCart(cartItems);
   };
 
+  // Funcion para eliminar un item del carrito
   const removeItem = (itemId) => {
     setCart(cart.filter((item) => item.id !== itemId));
   };
 
+  // Funcion para limpiar el carrito
   const clearCart = () => {
     setCart([]);
   };

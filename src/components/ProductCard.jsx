@@ -2,6 +2,7 @@ import { Box, Button, Paper, Stack, Typography } from "@mui/material";
 import { useState } from "react";
 import ProductDetailsDialog from "./ProductDetailsDialog";
 
+// Muestra la información básica de un producto y permite ver sus detalles
 export default function ProductCard({ product }) {
   const [open, setOpen] = useState(false);
 
